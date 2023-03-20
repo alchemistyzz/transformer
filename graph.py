@@ -6,7 +6,7 @@
 
 import matplotlib.pyplot as plt
 import re
-
+import pylab
 
 def read(name):
     f = open(name, 'r')
@@ -37,6 +37,8 @@ def draw(mode):
     plt.title('training result')
     plt.grid(True, which='both', axis='both')
     plt.show()
+    # pylab.show()
+    plt.savefig(f"./result/"+mode+".png")
 
 
 if __name__ == '__main__':
